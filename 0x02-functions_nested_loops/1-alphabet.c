@@ -5,14 +5,18 @@
  *
  *Return: Always 0
  */
+
 void print_alphabet(void)
 {
-	char i = 'a';
+	char lwc = 'a';
 
-while (i <= 'z')
-{
-	_putchar (i);
-	i++;
-}
+	while (lwc <= 'z')
+	{
+		_putchar (lwc);
+		lwc++;
+
+	}
 	_putchar ('\n');
+
 }
+

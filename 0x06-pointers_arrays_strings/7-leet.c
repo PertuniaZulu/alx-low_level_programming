@@ -6,20 +6,25 @@
  */
 char *leet(char *s)
 {
-	int a = 0, b;
-	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int a, b;
+	char i = "aAeEoOtTlL";
+	char j = "4433007711";
 
-	while (s[a])
+	a = 0;
+
+	while (s[a] != '\0')
 	{
-		for (b = 0; b <= 7; b++)
+		a = 0;
+		while (b < 10)
 		{
-			if (str[a] == leet[b] ||
-				str[a] - 32 == leet[b])
-				str[a] = b + '0';
+			if (i[b] == s[a])
+			{
+				s[a] = j[b];
+			}
+			b++;
 		}
-
 		a++;
 	}
-
 	return (s);
 }
+

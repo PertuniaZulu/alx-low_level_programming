@@ -6,25 +6,24 @@
  */
 char *leet(char *s)
 {
-	int a, b;
-	char i = "aAeEoOtTlL";
-	char j = "4433007711";
+	int count = 0, i;
+	int low[] = {97, 101, 111, 116, 108};
+	int upp[] = {65, 69, 79, 84, 76};
+	int num[] = {52, 51, 48, 55, 49};
 
-	a = 0;
-
-	while (s[a] != '\0')
+	while (*(s + count) != '\0')
 	{
-		a = 0;
-		while (b < 10)
+		for (i = 0; i < 5; i++)
 		{
-			if (i[b] == s[a])
+			if (*(s + count) == low[i] || *(s + count) == upp[i])
 			{
-				s[a] = j[b];
+				*(s + count) = num[i];
+				break;
 			}
-			b++;
 		}
-		a++;
+		count++;
 	}
+
 	return (s);
 }
 
